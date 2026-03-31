@@ -12,18 +12,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="description" content="Sicilian blood orange marmalade made from Tarocco and Moro oranges harvested at peak season on the volcanic slopes of Etna. Bittersweet, complex, and unlike any marmalade you have had before.">
-<title>Blood Orange Marmalade — Cafiero Imports</title>
+<title>Blood Orange Marmalade â Cafiero Imports</title>
 <link rel="canonical" href="https://www.cafieroimports.com/blood-orange-marmalade">
-<meta property="og:title" content="Blood Orange Marmalade — Cafiero Imports">
+<meta property="og:title" content="Blood Orange Marmalade â Cafiero Imports">
 <meta property="og:description" content="Sicilian blood orange marmalade made from Tarocco and Moro oranges harvested at peak season on the volcanic slopes of Etna.">
 <meta property="og:image" content="https://www.cafieroimports.com/images/marmalade.webp">
 <meta property="og:url" content="https://www.cafieroimports.com/blood-orange-marmalade">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Blood Orange Marmalade — Cafiero Imports">
+<meta name="twitter:title" content="Blood Orange Marmalade â Cafiero Imports">
 <meta name="twitter:description" content="Sicilian blood orange marmalade made from Tarocco and Moro oranges harvested at peak season on the volcanic slopes of Etna.">
 <meta name="twitter:image" content="https://www.cafieroimports.com/images/marmalade.webp">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍋</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ð</text></svg>">
 <link rel="preload" as="image" href="/images/marmalade.webp" imagesrcset="/images/marmalade-480w.webp 480w,/images/marmalade-800w.webp 800w,/images/marmalade-1600w.webp 1600w" imagesizes="100vw">
 <style>@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:300;font-display:swap;src:url(/fonts/barlow-condensed-300.woff2) format('woff2')}@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/barlow-condensed-500.woff2) format('woff2')}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/bebas-neue-400.woff2) format('woff2')}@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;font-display:swap;src:url(/fonts/cormorant-garamond-300.woff2) format('woff2')}@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url(/fonts/cormorant-garamond-300i.woff2) format('woff2')}</style>
 </head>
@@ -41,7 +41,7 @@
 <p class="prod-num">No. 01</p>
 <h1 class="prod-name">BLOOD<br>ORANGE<br>MARMALADE</h1>
 <p class="prod-sub">Marmellata di Arancia Rossa</p>
-<p class="prod-desc">Made from Sicilian blood oranges at peak season — when the color runs deepest and the flavor hits hardest. Bittersweet, complex, and unlike any marmalade you have had before.</p>
+<p class="prod-desc">Made from Sicilian blood oranges at peak season â when the color runs deepest and the flavor hits hardest. Bittersweet, complex, and unlike any marmalade you have had before.</p>
 <p class="prod-price">$18</p>
 <p class="prod-unit">280g jar</p>
 <div class="prod-buy">
@@ -55,10 +55,10 @@
 <option value="5">5</option>
 </select>
 </div>
-<button class="atc-btn" onclick="document.getElementById('notify-modal').classList.add('active');document.body.style.overflow='hidden'">Add to Cart</button>
+<button class="atc-btn" onclick="cafAddToCart()">Add to Cart</button>
 </div>
 <ul class="prod-list">
-<li><strong>Origin</strong> Sicily, Italy — Etna region</li>
+<li><strong>Origin</strong> Sicily, Italy â Etna region</li>
 <li><strong>Variety</strong> Tarocco &amp; Moro blood oranges</li>
 <li><strong>Ingredients</strong> Blood oranges, cane sugar, lemon juice</li>
 <li><strong>Season</strong> Harvested December through February</li>
@@ -70,7 +70,7 @@
 <div class="story">
 <p class="story-tagline">The fruit of Etna</p>
 <h2 class="story-heading">VOLCANIC<br>ORIGINS</h2>
-<p class="story-text">The blood orange is not just any citrus. The dramatic red flesh comes from anthocyanins triggered by the sharp temperature swings between Sicilian days and nights — a phenomenon almost exclusive to the volcanic slopes around Etna. Our marmalade is made in small batches during the brief winter harvest, when the fruit is at its most intensely flavored. Nothing added, nothing removed. Just fruit, sugar, and time.</p>
+<p class="story-text">The blood orange is not just any citrus. The dramatic red flesh comes from anthocyanins triggered by the sharp temperature swings between Sicilian days and nights â a phenomenon almost exclusive to the volcanic slopes around Etna. Our marmalade is made in small batches during the brief winter harvest, when the fruit is at its most intensely flavored. Nothing added, nothing removed. Just fruit, sugar, and time.</p>
 </div>
 
 <!-- Notify Modal -->
@@ -96,7 +96,7 @@
 
 <div class="ft"><span class="ft-l">Cafiero Imports</span><span class="ft-r">Siracusa, Sicily</span></div>
 
-<script>document.getElementById('notify-modal').addEventListener('click',function(e){if(e.target===this){this.classList.remove('active');document.body.style.overflow=''}});function cafWL(e){e.preventDefault();var f=e.target,i=f.querySelector("input[type=email]"),b=f.querySelector("button[type=submit]"),v=i.value;if(!v)return;b.textContent="Sending...";b.disabled=true;var d=new FormData();d.append("EMAIL",v);d.append("MMERGE6","tinned-fish");fetch("https://cafieroconfetti.us18.list-manage.com/subscribe/post?u=085731ee3760c45c8c519249f&id=32b4695253&f_id=0042ade6f0",{method:"POST",mode:"no-cors",body:d}).then(function(){document.getElementById('modal-form-view').style.display='none';document.getElementById('modal-success-view').style.display='block';setTimeout(function(){document.getElementById('notify-modal').classList.remove('active');document.body.style.overflow='';document.getElementById('modal-form-view').style.display='';document.getElementById('modal-success-view').style.display='none';b.textContent="Notify Me";b.disabled=false;i.value=""},3e3)}).catch(function(){document.getElementById('modal-form-view').style.display='none';document.getElementById('modal-success-view').style.display='block';setTimeout(function(){document.getElementById('notify-modal').classList.remove('active');document.body.style.overflow='';document.getElementById('modal-form-view').style.display='';document.getElementById('modal-success-view').style.display='none';b.textContent="Notify Me";b.disabled=false;i.value=""},3e3)})}</script>
+<script>/* GA4 Ecommerce: view_item on page load */ gtag('event', 'view_item', { currency: 'USD', value: 18.00, items: [{ item_id: 'blood-orange-marmalade', item_name: 'Blood Orange Marmalade', price: 18.00, quantity: 1, item_category: 'food' }] }); /* GA4 Ecommerce: add_to_cart on button click */ function cafAddToCart(){ var qty = parseInt(document.getElementById('qty').value) || 1; gtag('event', 'add_to_cart', { currency: 'USD', value: 18.00 * qty, items: [{ item_id: 'blood-orange-marmalade', item_name: 'Blood Orange Marmalade', price: 18.00, quantity: qty, item_category: 'food' }] }); document.getElementById('notify-modal').classList.add('active'); document.body.style.overflow='hidden'; } document.getElementById('notify-modal').addEventListener('click',function(e){if(e.target===this){this.classList.remove('active');document.body.style.overflow=''}});function cafWL(e){e.preventDefault();var f=e.target,i=f.querySelector("input[type=email]"),b=f.querySelector("button[type=submit]"),v=i.value;if(!v)return;b.textContent="Sending...";b.disabled=true; gtag('event', 'waitlist_signup', { item_id: 'blood-orange-marmalade', item_name: 'Blood Orange Marmalade', method: 'email' }); var d=new FormData();d.append("EMAIL",v);d.append("MMERGE6","tinned-fish");fetch("https://cafieroconfetti.us18.list-manage.com/subscribe/post?u=085731ee3760c45c8c519249f&id=32b4695253&f_id=0042ade6f0",{method:"POST",mode:"no-cors",body:d}).then(function(){document.getElementById('modal-form-view').style.display='none';document.getElementById('modal-success-view').style.display='block';setTimeout(function(){document.getElementById('notify-modal').classList.remove('active');document.body.style.overflow='';document.getElementById('modal-form-view').style.display='';document.getElementById('modal-success-view').style.display='none';b.textContent="Notify Me";b.disabled=false;i.value=""},3e3)}).catch(function(){document.getElementById('modal-form-view').style.display='none';document.getElementById('modal-success-view').style.display='block';setTimeout(function(){document.getElementById('notify-modal').classList.remove('active');document.body.style.overflow='';document.getElementById('modal-form-view').style.display='';document.getElementById('modal-success-view').style.display='none';b.textContent="Notify Me";b.disabled=false;i.value=""},3e3)})}</script>
 </div>
 </body>
 </html>
