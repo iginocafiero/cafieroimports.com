@@ -61,14 +61,10 @@ gtag('config', 'G-VGPJM6HCJ6');
 #cafiero-site .prod-list{list-style:none;border-top:1px solid #d4cec5;padding-top:24px;margin-bottom:40px}
 #cafiero-site .prod-list li{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.1em;color:#6b6660;padding:8px 0;border-bottom:1px solid #f2ede4}
 #cafiero-site .prod-list li strong{font-weight:500;color:#1a1a18;margin-right:8px}
-    
-/* Story Section */
 #cafiero-site .story{padding:80px 48px;border-top:1px solid #d4cec5;margin-top:40px}
 #cafiero-site .story-tagline{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:#6b6660;margin-bottom:24px;text-align:center}
 #cafiero-site .story-heading{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,4vw,56px);line-height:.95;letter-spacing:.02em;color:#1a1a18;margin-bottom:28px;text-align:center}
 #cafiero-site .story-text{font-size:17px;line-height:1.85;color:#6b6660;font-weight:300;max-width:640px;margin:0 auto;text-align:center}
-    
-/* Cross-sell Section */
 #cafiero-site .cross{padding:80px 48px;border-top:1px solid #d4cec5}
 #cafiero-site .cross-tagline{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:#6b6660;margin-bottom:24px;text-align:center}
 #cafiero-site .cross-heading{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,3.5vw,48px);line-height:.95;letter-spacing:.02em;color:#1a1a18;margin-bottom:48px;text-align:center}
@@ -80,7 +76,6 @@ gtag('config', 'G-VGPJM6HCJ6');
 #cafiero-site .cross-card-name{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:.02em;color:#1a1a18;margin-bottom:4px}
 #cafiero-site .cross-card-desc{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:#6b6660}
 #cafiero-site .cross-card-price{font-family:'Cormorant Garamond',serif;font-size:18px;color:#1a1a18;margin-top:8px}
-/* Modal */
 #cafiero-site .modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(26,26,24,0.55);z-index:200;align-items:center;justify-content:center;opacity:0;transition:opacity .3s ease}
 #cafiero-site .modal-overlay.active{display:flex;opacity:1}
 #cafiero-site .modal-box{background:#fff;padding:40px 36px;max-width:440px;width:90%;position:relative;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.12);transform:translateY(16px);transition:transform .3s ease}
@@ -100,7 +95,6 @@ gtag('config', 'G-VGPJM6HCJ6');
 #cafiero-site .modal-success .check{font-size:36px;margin-bottom:12px}
 #cafiero-site .modal-success .msg{font-family:'Cormorant Garamond',serif;font-size:18px;color:#1a1a18;margin-bottom:8px}
 #cafiero-site .modal-success .sub{font-family:'Cormorant Garamond',serif;font-size:14px;color:#6b6660;font-style:italic}
-/* Footer */
 #cafiero-site .ft{padding:40px 48px;border-top:1px solid #d4cec5;display:flex;justify-content:space-between;align-items:center}
 #cafiero-site .ft-l{font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:#6b6660}
 #cafiero-site .ft-r{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:#6b6660}
@@ -126,7 +120,7 @@ gtag('config', 'G-VGPJM6HCJ6');
 <p class="prod-num">No. 03</p>
 <h1 class="prod-name">SICILIAN<br>BLUEFIN<br>TUNA</h1>
 <p class="prod-sub">Tonno Rosso di Sicilia</p>
-<span class="prod-species-badge">Wild-Caught Bluefin &#183; Mediterranean Sea</span>
+<span class="prod-species-badge">Wild-Caught Bluefin &middot; Mediterranean Sea</span>
 <p class="prod-desc">This is bluefin tuna &mdash; <em>tonno rosso</em> &mdash; the same species that sells for hundreds per pound at top sushi restaurants. We tin it. Hand-packed in Sicilian extra virgin olive oil from a seasonal catch, this is not pantry tuna. This is something you put on a plate and pour a glass of wine for.</p>
 <p class="prod-price">$24</p>
 <p class="prod-unit">200g tin</p>
@@ -141,7 +135,7 @@ gtag('config', 'G-VGPJM6HCJ6');
 <option value="5">5</option>
 </select>
 </div>
-<button class="atc-btn" onclick="document.getElementById('notify-modal').classList.add('active');document.body.style.overflow='hidden'">Add to Cart</button>
+<button class="atc-btn" onclick="cafAddToCart()">Add to Cart</button>
 <p class="shipping-note">Ships nationwide, carefully packed</p>
 </div>
 <ul class="prod-list">
@@ -207,8 +201,82 @@ gtag('config', 'G-VGPJM6HCJ6');
 <div class="ft"><span class="ft-l">Cafiero Imports</span><span class="ft-r">Siracusa, Sicily</span></div>
 
 <script>
+/* ââ GA4 Ecommerce: view_item on page load ââ */
+gtag('event', 'view_item', {
+  currency: 'USD',
+  value: 24.00,
+  items: [{
+    item_id: 'bluefin-tuna-200g',
+    item_name: 'Sicilian Bluefin Tuna',
+    item_brand: 'Cafiero Imports',
+    item_category: 'Tinned Fish',
+    price: 24.00,
+    quantity: 1
+  }]
+});
+
+/* ââ GA4 Ecommerce: add_to_cart on button click ââ */
+function cafAddToCart(){
+  var qty = parseInt(document.getElementById('qty').value) || 1;
+  gtag('event', 'add_to_cart', {
+    currency: 'USD',
+    value: 24.00 * qty,
+    items: [{
+      item_id: 'bluefin-tuna-200g',
+      item_name: 'Sicilian Bluefin Tuna',
+      item_brand: 'Cafiero Imports',
+      item_category: 'Tinned Fish',
+      price: 24.00,
+      quantity: qty
+    }]
+  });
+  /* Open the sold-out / notify modal */
+  document.getElementById('notify-modal').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+
+/* ââ Modal: close on backdrop click ââ */
 document.getElementById('notify-modal').addEventListener('click',function(e){if(e.target===this){this.classList.remove('active');document.body.style.overflow=''}});
-function cafWL(e){e.preventDefault();var f=e.target,i=f.querySelector("input[type=email]"),b=f.querySelector("button[type=submit]"),v=i.value;if(!v)return;b.textContent="Sending...";b.disabled=true;var d=new FormData();d.append("EMAIL",v);d.append("MMERGE6","tinned-fish");fetch("https://cafieroconfetti.us18.list-manage.com/subscribe/post?u=085731ee3760c45c8c519249f&id=32b4695253&f_id=0042ade6f0",{method:"POST",mode:"no-cors",body:d}).then(function(){document.getElementById('modal-form-view').style.display='none';document.getElementById('modal-success-view').style.display='block';setTimeout(function(){document.getElementById('notify-modal').classList.remove('active');document.body.style.overflow='';document.getElementById('modal-form-view').style.display='';document.getElementById('modal-success-view').style.display='none';b.textContent="Notify Me";b.disabled=false;i.value=""},3e3)}).catch(function(){document.getElementById('modal-form-view').style.display='none';document.getElementById('modal-success-view').style.display='block';setTimeout(function(){document.getElementById('notify-modal').classList.remove('active');document.body.style.overflow='';document.getElementById('modal-form-view').style.display='';document.getElementById('modal-success-view').style.display='none';b.textContent="Notify Me";b.disabled=false;i.value=""},3e3)})}
+
+/* ââ Waitlist signup with GA4 tracking ââ */
+function cafWL(e){
+  e.preventDefault();
+  var f=e.target,i=f.querySelector("input[type=email]"),b=f.querySelector("button[type=submit]"),v=i.value;
+  if(!v)return;
+  b.textContent="Sending...";b.disabled=true;
+
+  /* GA4: track waitlist signup */
+  gtag('event', 'waitlist_signup', {
+    item_id: 'bluefin-tuna-200g',
+    item_name: 'Sicilian Bluefin Tuna',
+    method: 'email'
+  });
+
+  var d=new FormData();
+  d.append("EMAIL",v);
+  d.append("MMERGE6","tinned-fish");
+  fetch("https://cafieroconfetti.us18.list-manage.com/subscribe/post?u=085731ee3760c45c8c519249f&id=32b4695253&f_id=0042ade6f0",{method:"POST",mode:"no-cors",body:d}).then(function(){
+    document.getElementById('modal-form-view').style.display='none';
+    document.getElementById('modal-success-view').style.display='block';
+    setTimeout(function(){
+      document.getElementById('notify-modal').classList.remove('active');
+      document.body.style.overflow='';
+      document.getElementById('modal-form-view').style.display='';
+      document.getElementById('modal-success-view').style.display='none';
+      b.textContent="Notify Me";b.disabled=false;i.value=""
+    },3e3)
+  }).catch(function(){
+    document.getElementById('modal-form-view').style.display='none';
+    document.getElementById('modal-success-view').style.display='block';
+    setTimeout(function(){
+      document.getElementById('notify-modal').classList.remove('active');
+      document.body.style.overflow='';
+      document.getElementById('modal-form-view').style.display='';
+      document.getElentById('modal-success-view').style.display='none';
+      b.textContent="Notify Me";b.disabled=false;i.value=""
+    },3e3)
+  })
+}
 </script>
 </div>
 </body>
