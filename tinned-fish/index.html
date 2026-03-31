@@ -201,31 +201,31 @@ gtag('config', 'G-VGPJM6HCJ6');
 <div class="ft"><span class="ft-l">Cafiero Imports</span><span class="ft-r">Siracusa, Sicily</span></div>
 
 <script>
-/* ââ GA4 Ecommerce: view_item on page load ââ */
+/* Ã¢ÂÂÃ¢ÂÂ GA4 Ecommerce: view_item on page load Ã¢ÂÂÃ¢ÂÂ */
 gtag('event', 'view_item', {
   currency: 'USD',
   value: 24.00,
   items: [{
-    item_id: 'bluefin-tuna-200g',
+    item_id: 'sicilian-bluefin-tuna',
     item_name: 'Sicilian Bluefin Tuna',
     item_brand: 'Cafiero Imports',
-    item_category: 'Tinned Fish',
+    item_category: 'food',
     price: 24.00,
     quantity: 1
   }]
 });
 
-/* ââ GA4 Ecommerce: add_to_cart on button click ââ */
+/* Ã¢ÂÂÃ¢ÂÂ GA4 Ecommerce: add_to_cart on button click Ã¢ÂÂÃ¢ÂÂ */
 function cafAddToCart(){
   var qty = parseInt(document.getElementById('qty').value) || 1;
   gtag('event', 'add_to_cart', {
     currency: 'USD',
     value: 24.00 * qty,
     items: [{
-      item_id: 'bluefin-tuna-200g',
+      item_id: 'sicilian-bluefin-tuna',
       item_name: 'Sicilian Bluefin Tuna',
       item_brand: 'Cafiero Imports',
-      item_category: 'Tinned Fish',
+      item_category: 'food',
       price: 24.00,
       quantity: qty
     }]
@@ -235,10 +235,10 @@ function cafAddToCart(){
   document.body.style.overflow='hidden';
 }
 
-/* ââ Modal: close on backdrop click ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Modal: close on backdrop click Ã¢ÂÂÃ¢ÂÂ */
 document.getElementById('notify-modal').addEventListener('click',function(e){if(e.target===this){this.classList.remove('active');document.body.style.overflow=''}});
 
-/* ââ Waitlist signup with GA4 tracking ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Waitlist signup with GA4 tracking Ã¢ÂÂÃ¢ÂÂ */
 function cafWL(e){
   e.preventDefault();
   var f=e.target,i=f.querySelector("input[type=email]"),b=f.querySelector("button[type=submit]"),v=i.value;
@@ -247,7 +247,7 @@ function cafWL(e){
 
   /* GA4: track waitlist signup */
   gtag('event', 'waitlist_signup', {
-    item_id: 'bluefin-tuna-200g',
+    item_id: 'sicilian-bluefin-tuna',
     item_name: 'Sicilian Bluefin Tuna',
     method: 'email'
   });
